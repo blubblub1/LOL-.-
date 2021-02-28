@@ -1,6 +1,6 @@
 <html>
       <head> 
-              <titel>Kostenfunktion>
+              <titel>Kostenfunktion laura</titel>
               
               <meta http-equiv="Conten-Type" content="text/html; charset=utf-8">
               
@@ -9,62 +9,60 @@
                        "use strict";
             function fKostenfunktion () {
             
-            var vfixK; 
-            var vx;
-            var varK;    
+                  var kv = parseFloat (document.getElementById("kv").value);
+                  
+                  var kf = parseFloat (document.getElementById("kf").value);
+                  
+                  var Start = parseFloat (document.getElementById("Start").value);
+                  
+                  var Endwert = parseFloat (document.getElementById("Endwert").value);
+                  
+                  var Schritt = parseFloat (document.getElementById("Schritt").value);
+                  
+                  var Kostenfunktion;
+                  
+                  var Ausgabe = "";
+                  
+                  Ausgabe = Ausgabe + "<table border = 1> <br>";
+                  
+                  Ausgabe = Ausgabe + "<tr><th>x</th><th>K(x)</th></tr>";
+                  
+                  while (Start <= Endwert) {
+                        
+                        Kostenfunktion = kv * Start +kf;
+                        
+                        Ausgabe = Ausgabe + "<tr><td>" + Start + "</td><td> + Kostenfunktion + "</td><td>" + Kostenfunktion + "</td></tr>;
+                        
+                        Start = Start + Schritt;
+                  }
+                  
+                  Ausgabe = Ausgabe + "</table>" + "<br>";
+                  
+                  document.getElementById("Ausgabe"),innerHTML = Ausgabe;
+                  
+            </script>
             
-            var vKvonx;
-            var vStart = -10;
-            var vAusgabe = "";
-            var vEndwert = 10;
+      </head>
+      
+      
+      <body>
             
+            VKosten : <input id="kv" type="text" value="">
             
-            vStart = document.getElementById("idStart").value;
-            vEndwert = document.getElementById("idEndwert").value;
-             vKv = document.getElementById("idvKv").value;
-              vfixK = document.getElementById("idvfixK").value;
-              
-              vAusgabe = vAusgabe + "<table border=1>";
-              vAusgabe = vAusgabe +"<tr><th>x</th><th>K(x)</th></tr>
-              
-               vKvonx = varK * vx + vfixK;
-                
-                while (vStart>=Endwert) }
-                
-                
-              vKvonx = varK * vx + vfixK;
-              
-              vAusgabe = vAusgabe + "<td>"+vx"</td>"+"<td>"+vKvonx+"</td>">
-              
-             varK++
-             
-             }
-             
-             vAusgabe = vAusgabe + "</table>";
-             
-             
-             document.getElementById("idAusgabe").innerHtml = vAusgabe,
-             
-             }
-             
-             </script>
-             </head>
-             
-             <body<>
-             
-             <h1>Kostenfunktion</h1>
-             
-             Start: <input id="idStart" type="text" value="-10" maxlength="100" size="5"><br><br>
-             Ende: <input id="idStart" type="text" value="10" maxlength="100" size="5"><br><br>
-             Kostenvariable: <input id="ididKv" type="text" value="2" maxlength="100" size="5"><br><br>
-             Fixe Kosten: <input id="id vfixK" type="text" value="20" maxlength="100" size="5"><br><br>
-             
-             <button onClick="fKostenfunktion();">Kostenfunktion berechnen</button>
-             <div id="idAusgabe"></div>
-             
-             </body>
-             </html>
-             
-             
+            FKosten : <input id="kf" type="text" value="">
             
-
+            WStart : <input id="Start" type="text" value="">
+            
+            Endwert : <input id="Endwert" type="text" value="">
+            
+            VSW : <input id="Schritt" type="text" value="">
+            
+            <button onClick="fKostenfunktion()">Bitte die Kostenfunktion berechnen</button>
+            
+            <div id="Ausgabe"></div>
+            
+      </body>
+</html>
+                  
+                  
+          

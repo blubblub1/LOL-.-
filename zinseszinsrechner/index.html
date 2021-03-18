@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zinseszinsrechner</title>
- 
-    <script>
-      
+    
+   <script>
+       
         function zinseszinsrechner() {
         var startkapital = parseFloat (document.getElementById("startkapital").value);
         var zinssatz = parseFloat (document.getElementById("zinssatz").value);
@@ -27,8 +27,9 @@
 
         ausgabe = ausgabe + "<tr><td>" + start + "</td><td>" + startkapital.toFixed(2) + "€" + "</td><td>" + zinsen.toFixed(2) + "€" + "</td><td>" + endkapital.toFixed(2) + "€" + "</td></tr>";
 
-        startkapital = endkapital;
-        start++;
+    startkapital = endkapital;
+    start++;
+        
     }
 
         ausgabe = ausgabe + "</table> <br>";
@@ -43,7 +44,7 @@
 
         <body>
 
-        <h1>Zinseszinsrechner</h1>
+        <h1>Zinseszinsrechner by Latif Akan</h1>
 
         Startkapital in €: <input id="startkapital" size="6" type="text" value="1000"> <br>
         Zinssatz in %: <input id="zinssatz" size="6" type="text" value="2"> <br>
@@ -55,5 +56,6 @@
 
         </body>
 
- </html>
+</html>
+
 
